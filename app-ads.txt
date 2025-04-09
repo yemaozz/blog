@@ -1,0 +1,11 @@
+#
+AdMob
+#
+google.com, pub-6716225838534735, RESELLER, f08c47fec0942fa0
+#
+Applovin
+#
+applovin.com, 842af0f98ced43638c9bfa1e8293f364, DIRECT
+loopme.com, 11303, RESELLER, 6c8d5f95897a5a3b
+pubmatic.com, 158862, RESELLER, 5d62403b186f2ace
+#
