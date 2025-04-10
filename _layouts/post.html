@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = "%Y年%-m月%-d日" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.author -%}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
+          </span>
+      {%- endif -%}</p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+    
+    {%- if post.tags.size > 0 -%}
+    <div class="post-tags">
+      标签：{{ post.tags | join: ", " }}
+    </div>
+    {%- endif -%}
+  </div>
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
+
+<!-- 保持原主题的导航样式 -->
+<div class="post-navigation">
+  {% if page.previous.url %}
+    <a class="prev" href="{{page.previous.url | relative_url}}">&laquo; {{page.previous.title}}</a>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="next" href="{{page.next.url | relative_url}}">{{page.next.title}} &raquo;</a>
+  {% endif %}
+</div>

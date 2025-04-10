@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ site.list_title | default: "文章列表" }}</h2>
+    <div class="wrapper">
+      {% include posts.html posts=site.posts %}
+    </div>
+    
+    <!-- 保持原主题的分页样式 -->
+    {% if site.paginate %}
+      <div class="pager">
+        <ul class="pagination">
+        {%- if paginator.previous_page %}
+          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
+        {%- endif %}
+          <li><div class="current-page">{{ paginator.page }}</div></li>
+        {%- if paginator.next_page %}
+          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+        {%- endif %}
+        </ul>
+      </div>
+    {%- endif %}
+    </div> 
+    <div class="rss-subscribe">
+      <a href="{{ "/feed.xml" | relative_url }}">
+        <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg>
+        <span>订阅本站</span>
+      </a>
+    </div>
+  {%- endif -%}
+</div> 

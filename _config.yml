@@ -16,21 +16,22 @@
 # 你可以创建任何自定义变量，它们可以在模板中通过 {{ site.myvariable }} 访问。
 
 title: 野猫的小站
+list_title: "最新文章"
 email: game@freegamehub.top
 description: >- # 这意味着忽略换行符，直到 "baseurl:"
-  个人或者小团队开发小游戏该怎么赚钱？分享一些微小的经验，也许
-  能帮助网友们赚点零花甚至更多。专注小游戏开发者变现实战，主介
-  绍出海谷歌play，同时也涉及国内小游戏平台。欢迎关注，一起进
-  步。
+  专注小游戏开发者变现实战，主介绍出海谷歌play，同时也涉及国内小游戏平台。欢迎关注，一起进步。
 baseurl: "" # 站点的子路径，例如 /blog
 url: "" # 站点的基本主机名和协议，例如 http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+#twitter_username: jekyllrb
+#github_username:  jekyll
+#telegram_username: miaowurz
+google_analytics: G-1RP6E6GC5H
 
 # 构建设置
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # 从处理中排除。
 # 以下项目默认不会被处理。

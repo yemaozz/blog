@@ -1,0 +1,28 @@
+{%- if include.posts.size > 0 -%}
+<ul class="post-list">
+  {%- for post in include.posts -%}
+  <li>
+    {%- assign date_format = "%Y年%-m月%-d日" -%}
+    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    
+    <h3>
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+      </a>
+    </h3>
+    
+    {%- if post.categories.size > 0 -%}
+    <div class="post-categories">
+      分类：{{ post.categories | join: ", " }}
+    </div>
+    {%- endif -%}
+
+    {%- if site.show_excerpts -%}
+    {{ post.excerpt }}  {# 如果需要显示摘要 #}
+    {%- endif -%}
+  </li>
+  {%- endfor -%}
+</ul>
+{%- else -%}
+<p class="empty-tip">暂无文章</p>
+{%- endif -%}

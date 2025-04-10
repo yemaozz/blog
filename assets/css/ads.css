@@ -1,0 +1,13 @@
+.ads-top, .ads-bottom {
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .ads-top, .ads-bottom {
+    margin: 10px;
+    padding: 10px;
+  }
+}

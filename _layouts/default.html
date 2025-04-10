@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+    <!-- 添加统计代码 -->
+    {%- if jekyll.environment == 'production' -%}
+      {%- include google-analytics.html -%}
+    {%- endif -%}
+    
+    {%- include header.html -%}
+
+    <!-- 顶部广告 -->
+    <div class="ads-top" style="margin: 20px auto; max-width: 1200px;">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4694110216243855" crossorigin="anonymous"></script>
+      <!-- blogFreegamehub -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-4694110216243855"
+          data-ad-slot="2588246687"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    <!-- 底部广告 -->
+    <div class="ads-bottom" style="margin: 40px auto; max-width: 1200px;">
+      <!-- 复用顶部广告代码 -->
+      {% include ads-top.html %}
+    </div>
+
+    {%- include footer.html -%}
+  </body>
+
+</html>

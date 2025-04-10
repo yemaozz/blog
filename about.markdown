@@ -1,18 +1,7 @@
 ---
+title: 关于
 layout: page
-title: About
-permalink: /about/
+permalink: "/about/"
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+多年游戏行业从业经验，在谷歌play已上线了几百款游戏，目前通过买量已经能有正向收入，分享一些微小的经验，也许能帮助网友们赚点零花甚至更多。
