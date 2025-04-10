@@ -11,17 +11,9 @@
     
     {%- include header.html -%}
 
-    <!-- 顶部广告 -->
-    <div class="ads-top" style="margin: 20px auto; max-width: 1200px;">
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4694110216243855" crossorigin="anonymous"></script>
-      <!-- blogFreegamehub -->
-      <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-4694110216243855"
-          data-ad-slot="2588246687"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <!-- 广告容器（顶部） -->
+    <div class="ads-container ads-top" id="ads-top">
+      {% include ads-unit.html %}
     </div>
 
     <main class="page-content" aria-label="Content">
@@ -31,12 +23,28 @@
     </main>
 
     <!-- 底部广告 -->
-    <div class="ads-bottom" style="margin: 40px auto; max-width: 1200px;">
-      <!-- 复用顶部广告代码 -->
-      {% include ads-top.html %}
+    <div class="ads-container ads-bottom" id="ads-bottom">
+      {% include ads-unit.html %}
     </div>
 
     {%- include footer.html -%}
+    <script>
+      // 等待广告加载完毕
+      
+      window.addEventListener("load", function () {
+        // 检查顶部广告
+        const topAd = document.getElementById("ads-top");
+        if (topAd && topAd.innerText.trim() === "") {
+          topAd.style.display = "none";
+        }
+      
+        // 检查底部广告
+        const bottomAd = document.getElementById("ads-bottom");
+        if (bottomAd && bottomAd.innerText.trim() === "") {
+          bottomAd.style.display = "none";
+        }
+      });
+      </script>
   </body>
 
 </html>
