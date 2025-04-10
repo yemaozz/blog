@@ -14,6 +14,7 @@ gem "minima", "~> 2.5"
 # 如果你有任何插件，请将它们放在这里！
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
+  gem 'jekyll-seo-tag'
 end
 
 # Windows 和 JRuby 不包含时区信息文件，因此需要捆绑 tzinfo-data gem 和相关库。
@@ -27,6 +28,5 @@ gem "wdm", "~> 0.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 # 在 JRuby 构建中，将 `http_parser.rb` gem 锁定到 `v0.6.x`，因为该 gem 的较新版本没有 Java 版本。
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
-gem 'jekyll-seo-tag'
 gem 'jekyll-admin', group: :jekyll_plugins
 gem "jekyll-paginate", "~> 1.1"

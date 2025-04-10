@@ -7,7 +7,7 @@
     {%- include header.html -%}
 
     <!-- 广告容器（顶部） -->
-    <div class="ads-container ads-top" id="ads-top">
+    <div id="ads-top">
       {% include ads-unit.html %}
     </div>
 
@@ -18,28 +18,27 @@
     </main>
 
     <!-- 底部广告 -->
-    <div class="ads-container ads-bottom" id="ads-bottom">
+    <div id="ads-bottom">
       {% include ads-unit.html %}
     </div>
 
     {%- include footer.html -%}
     <script>
       // 等待广告加载完毕
-      
       window.addEventListener("load", function () {
         // 检查顶部广告
         const topAd = document.getElementById("ads-top");
         if (topAd && topAd.innerText.trim() === "") {
           topAd.style.display = "none";
         }
-      
+
         // 检查底部广告
-        const bottomAd = document.getElementById("ads-bottom");
-        if (bottomAd && bottomAd.innerText.trim() === "") {
-          bottomAd.style.display = "none";
-        }
+        // const bottomAd = document.getElementById("ads-bottom");
+        // if (bottomAd && bottomAd.innerText.trim() === "") {
+        //   bottomAd.style.display = "none";
+        // }
       });
-      </script>
+    </script>
   </body>
 
 </html>

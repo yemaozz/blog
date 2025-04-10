@@ -1,8 +1,29 @@
-.ads-container {
-  margin: 20px auto;
+.ad-container {
+  height: 90px !important; /* 强制高度 */
+  overflow: hidden !important;
+  margin: 10px auto;
   max-width: 1200px;
-  min-width: 320px;
+  position: relative; /* 新增定位 */
 }
-.ads-bottom {
-  margin-top: 40px;
+
+/* 新增广告内容限制 */
+.adsbygoogle,
+.adsbygoogle iframe {
+  height: 100% !important;
+  width: 100% !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  transform: scale(1) !important; /* 防止自动缩放 */
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .ad-container {
+    height: 60px !important;
+    margin: 5px;
+  }
+}
+ins.adsbygoogle[data-ad-status="unfilled"] {
+  display: none !important;
 }
