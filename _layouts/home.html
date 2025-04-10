@@ -17,17 +17,25 @@ layout: default
     
     <!-- 保持原主题的分页样式 -->
     {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- endif %}
-        </ul>
-      </div>
+      {% if paginator.total_pages > 1 %}
+        <div class="pager">
+          <ul class="pagination">
+          {% if paginator.previous_page %}
+            <li><a href="{{ paginator.previous_page_path | relative_url }}">&laquo;</a></li>
+          {% endif %}
+          
+          {% for page in (1..paginator.total_pages) %}
+            <li {% if page == paginator.page %}class="active"{% endif %}>
+              <a href="{% if page == 1 %}/{% else %}/page{{ page }}/{% endif %}">{{ page }}</a>
+            </li>
+          {% endfor %}
+          
+          {% if paginator.next_page %}
+            <li><a href="{{ paginator.next_page_path | relative_url }}">&raquo;</a></li>
+          {% endif %}
+          </ul>
+        </div>
+      {% endif %}
     {%- endif %}
     </div> 
     <div class="rss-subscribe">
@@ -37,4 +45,4 @@ layout: default
       </a>
     </div>
   {%- endif -%}
-</div> 
+</div>

@@ -30,8 +30,19 @@ google_analytics: G-1RP6E6GC5H
 # 构建设置
 theme: minima
 plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag 
   - jekyll-feed
-  - jekyll-seo-tag
+
+# 显式指定分页配置（取消注释）
+paginate: 5
+paginate_path: /page:num/
+
+# 允许未来日期的文章显示
+future: true
+
+# 必须添加 safe 模式兼容设置
+safe: true
 
 # 从处理中排除。
 # 以下项目默认不会被处理。
