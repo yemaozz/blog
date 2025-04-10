@@ -23,6 +23,13 @@
     height: 60px !important;
     margin: 5px;
   }
+  #ads-top .ad-container {
+    height: 80px !important; /* 明确移动端高度 */
+    margin-bottom: 10px;
+  }
+  #ads-top .adsbygoogle {
+    max-height: 80px !important;
+  }
 }
 ins.adsbygoogle[data-ad-status="unfilled"] {
   display: none !important;
