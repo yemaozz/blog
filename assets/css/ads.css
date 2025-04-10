@@ -27,3 +27,11 @@
 ins.adsbygoogle[data-ad-status="unfilled"] {
   display: none !important;
 }
+#ads-top .ad-container {
+  height: 90px !important; /* 顶部广告高度 */
+  background: #f8f9fa; /* 添加背景色 */
+}
+
+#ads-top .adsbygoogle {
+  max-height: 90px !important;
+}
