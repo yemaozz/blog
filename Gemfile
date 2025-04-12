@@ -6,11 +6,11 @@ source "https://rubygems.org"
 #
 # 这将有助于确保运行的是正确的 Jekyll 版本。
 # 祝你使用 Jekyll 愉快！
-gem "jekyll", "~> 4.4.1"
+#gem "jekyll", "~> 4.4.1"
 # 这是新 Jekyll 网站的默认主题。你可以将其更改为任何你喜欢的主题。
-gem "minima", "~> 2.5"
+#gem "minima", "~> 2.5"
 # 如果你想使用 GitHub Pages，请删除上面的 "gem "jekyll"" 并取消注释下面的行。要升级，请运行 `bundle update github-pages`。
-# gem "github-pages", group: :jekyll_plugins
+gem "github-pages", group: :jekyll_plugins
 # 如果你有任何插件，请将它们放在这里！
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
