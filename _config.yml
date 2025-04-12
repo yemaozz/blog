@@ -35,11 +35,11 @@ plugins:
   - jekyll-feed
 
 # 显式指定分页配置（取消注释）
-paginate: 5
-paginate_path: /page:num/
+#paginate: 5
+#paginate_path: /page:num/
 
 # 允许未来日期的文章显示
-future: true
+#future: true
 
 # 必须添加 safe 模式兼容设置
 safe: true
